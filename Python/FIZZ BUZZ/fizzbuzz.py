@@ -5,7 +5,7 @@ def findFizzBuzz(n):
             aux="Fizz"
         if i % 5 == 0:
             aux+="Buzz"
-        print(aux or i)
+        print(i if not aux else aux)
 
 if __name__ == "__main__":
     findFizzBuzz(100)
