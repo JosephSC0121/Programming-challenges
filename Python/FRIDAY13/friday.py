@@ -3,7 +3,7 @@ import calendar
 objCal = calendar.Calendar()
 
 def findFriday():
-    for day in objectCal.itermonthdays3(year, month):
+    for day in objCal.itermonthdays3(year, month):
         if day[2]==13 and calendar.weekday(*day)==4:
             return True
     return False
