@@ -1,5 +1,7 @@
 import math
 
+# FUNTION FOR PRIME NUMBERS
+
 def prime_numbers(n):
     if n < 2:
         return False
