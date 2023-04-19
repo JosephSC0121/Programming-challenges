@@ -34,9 +34,9 @@ def update(screen, cells, size, with_progress = False):
 
 def main():
     pygame.init()
-    screen = pygame.display.set_mode((1920,1080))
+    screen = pygame.display.set_mode((1440,900))
 
-    cells = np.zeros((108,192))
+    cells = np.zeros((90,144))
     screen.fill(color_grid)
     update(screen,cells,10)
 
