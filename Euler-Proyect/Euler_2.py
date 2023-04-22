@@ -1,9 +1,6 @@
 import math
 
 def is_fibonacci(n):
-    # Check if the input value is valid
-    if n <= 0:
-        return False
     # Check if the number is a perfect square
     root1 = math.isqrt(5*n*n + 4)
     root2 = math.isqrt(5*n*n - 4)
