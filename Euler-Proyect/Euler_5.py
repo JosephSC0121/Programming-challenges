@@ -21,13 +21,13 @@ def smallest(num):
     result = 1
     for p in primes:
         i = 1
-        # Encuentra la potencia maxima de cada primo y que de menor a Num 
+        # Encuentra la potencia maxima de cada numero primo para MCM
         while p**i < num:
             i += 1
-        # los multiplica todos 
+        # Multiplica todas las potencias maximas
         result *= p**(i-1)
     return result
 
 if __name__ == "__main__":
-    smallest(10)
+    print(smallest(20))
 
