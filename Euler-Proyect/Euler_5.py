@@ -1,3 +1,33 @@
 # 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
+
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+import math
+def prime_number(n):
+    for i in range(2,int(math.sqrt(n))+1):
+        if n % i == 0:
+             return False
+    return True
+                
+def prime_number_list(num): 
+    lista = []
+    for i in range(2, num):
+        if prime_number(i) == True:
+            lista.append(i)
+    return lista
+
+def smallest(num):
+    primes = prime_number_list(num) 
+    result = 1
+    for p in primes:
+        i = 1
+        # Encuentra la potencia maxima de cada primo y que de menor a Num 
+        while p**i < num:
+            i += 1
+        # los multiplica todos 
+        result *= p**(i-1)
+    return result
+
+if __name__ == "__main__":
+    smallest(10)
+
