@@ -14,13 +14,11 @@ def triangle_divisors():
     i = 0
     while div < 500:
         i += 1
-        div = 0
+        div = -1
         if triangle_number(i) == True:
             for x in range(1, int(math.sqrt(i))+1):
                 if i % x == 0:
                     div += 2
-            if math.sqrt(i)**2 == i:
-                div -=1
     return i 
 
 if __name__ == "__main__":
