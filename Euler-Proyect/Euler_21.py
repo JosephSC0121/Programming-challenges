@@ -1,3 +1,4 @@
+# Proyect Euler Problem #21
 import numpy as np
 def amicable(end):
     start = 1

@@ -1,5 +1,6 @@
-# what is the value of the first triangle number to have over five hundred divisors?
+# Project Euler Problem #12
 import math
+import time
 
 def triangle_number(x):
 
@@ -22,5 +23,7 @@ def triangle_divisors():
     return i 
 
 if __name__ == "__main__":
+    start = time.time()
     print(triangle_divisors())            
-
+    end = time.time()
+    print(end - start)

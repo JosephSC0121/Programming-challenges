@@ -1,3 +1,4 @@
+# Project Euler Problem #35
 import math
 def prime_number(n):
     for i in range (2, int(math.sqrt(n))+1):

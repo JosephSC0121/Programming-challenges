@@ -1,3 +1,5 @@
+# Project Euler Problem #14
+
 def collatz_sequence(num):
     count = 0
     aux = 0
