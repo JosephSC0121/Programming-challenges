@@ -1,5 +1,4 @@
 #Project Euler Problem 76
-import time 
 def primes_sum():
     target = 100
     ns = range(1, target)
