@@ -1,3 +1,4 @@
+# Project Euler Problem #9
 def pitagoras_triplet():
     for a in range(1, 1000):
         for b in range(1, 1000):

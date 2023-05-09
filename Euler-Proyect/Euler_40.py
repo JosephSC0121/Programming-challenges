@@ -1,3 +1,4 @@
+# Project Euler Problem #40
 def Champernownes():
     constant = "0"
     up = 1000000

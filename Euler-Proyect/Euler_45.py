@@ -1,3 +1,4 @@
+# Project Euler Problem #45
 import math
 def is_pentagonal(p):
     if (math.sqrt(24*p+1)+1)%6 == 0:

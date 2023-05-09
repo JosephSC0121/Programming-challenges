@@ -1,3 +1,4 @@
+# Project Euler Problem #6
 # the sum of the squares
 
 def sum_squares(num):
