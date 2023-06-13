@@ -1,4 +1,4 @@
-# Project Euler Problem #2
+# Project Euler Problem #3
 import math
 
 def is_fibonacci(n):
@@ -12,7 +12,7 @@ def is_fibonacci(n):
 
 def comparation():
     add = 0
-    for i in range(1,4000000):
+    for i in range(1,10):
         if is_fibonacci(i)==True and i%2==0:
             add += i
     return add
