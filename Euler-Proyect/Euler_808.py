@@ -12,12 +12,10 @@ def list_primality(n): # Criba de Erastótenes
     return is_prime
     
 def is_not_palindrome(x):
-    if x == x[::-1]:
-        return False
-    return True
+    return x!=x[::-1]
 
-def compute(n, limit = 5*10**7):
-    is_prime = list_primality(limit)
+def compute(n):
+    is_prime = list_primality(5*10**7)
     primes = [i for (i, isprime) in enumerate(is_prime) if isprime]
     values = []
     for x in primes[5:]:
@@ -31,6 +29,6 @@ def compute(n, limit = 5*10**7):
     return sum(values)
 if __name__ == "__main__":
     start = time.time()
-    print('Answer: ', compute(50))
+    print('Answer: ',compute(50))
     end = time.time()
     print('----',end-start,'-----')
