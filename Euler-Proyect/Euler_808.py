@@ -15,7 +15,7 @@ def is_not_palindrome(x):
     return x!=x[::-1]
 
 def compute(n):
-    is_prime = list_primality(5*10**7)
+    is_prime = list_primality(4*10**7)
     primes = [i for (i, isprime) in enumerate(is_prime) if isprime]
     values = []
     for x in primes[5:]:
