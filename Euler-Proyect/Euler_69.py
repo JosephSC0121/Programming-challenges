@@ -50,9 +50,5 @@ if __name__ == "__main__":
       userinput = input("Please input an integer: ")
       start_time = time.time()
       temp = maxprimefactors(int(userinput))
-      if temp == 510510:
-        print("Contains solution try a smaller number")
-      else:
-        print(temp)
-        break
+      print(temp)
     print("--- %s seconds ---" % (time.time() - start_time))
