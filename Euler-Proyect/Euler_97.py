@@ -1,4 +1,4 @@
 if __name__ == "__main__":
-    aux = 12345678987654321
-    last_digits = aux % 10 ** 5 
+    aux = 2**7830457 * 28433 +1
+    last_digits = aux % 10 ** 10 
     print(last_digits)
