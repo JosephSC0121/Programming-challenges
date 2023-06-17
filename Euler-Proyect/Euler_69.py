@@ -44,6 +44,4 @@ def maxprimefactors(limit):
     return total
 
 if __name__ == "__main__":
-    start_time = time.time()
-    print(maxprimefactors(1000000))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print(maxprimefactors(10))
