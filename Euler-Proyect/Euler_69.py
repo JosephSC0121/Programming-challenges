@@ -1,17 +1,15 @@
 import time, math
 
-def list_primality(n):
-	result = [True] * (n + 1)
-	result[0] = result[1] = False
-	for i in range(int(math.sqrt(n)) + 1):
-		if result[i]:
-			for j in range(i * i, len(result), i):
-				result[j] = False
-	return result
+def list_primality(n): # Criba de Erastótenes
 
-def list_primes(n):
-	return [i for (i, isprime) in enumerate(list_primality(n)) if isprime]
-	
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False
+    for p in range(2, int(math.sqrt(n)) + 1):
+        if is_prime[p]:
+            for i in range(p * p, len(is_prime), p):
+                is_prime[i] = False
+    return is_prime
+
 def prime_factors(n):
     factors = []
     d = 2
@@ -33,11 +31,11 @@ def phi(n):
     for p in prime_factor:
         total *= (1-1/p)
         
-    return (total)
+    return total
 
 def maxprimefactors(limit):
     total = 1
-    primes = list_primes(int(math.sqrt(limit)))
+    primes = [i for (i, isprime) in enumerate(list_primality(int(math.sqrt(limit)))) if isprime]
     for i in primes:
         if total * i > limit:
             break
@@ -46,9 +44,6 @@ def maxprimefactors(limit):
     return total
 
 if __name__ == "__main__":
-    while True:
-      userinput = input("Please input an integer: ")
-      start_time = time.time()
-      temp = maxprimefactors(int(userinput))
-      print(temp)
+    start_time = time.time()
+    print(maxprimefactors(1000000))
     print("--- %s seconds ---" % (time.time() - start_time))
