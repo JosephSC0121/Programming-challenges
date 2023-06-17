@@ -1,6 +1,6 @@
 import time, math
 
-def list_primality(n): # Criba de Erastótenes
+def Erastotenes_crib(n): # Criba de Erastótenes
 
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False
@@ -18,7 +18,7 @@ def prime_factors(n):
             factors.append(d)
             n /= d
         d = d + 1
-        if d*d > n:
+        if d*d > n: 
             if n > 1: 
                 factors.append(n)
             break
@@ -35,7 +35,7 @@ def phi(n):
 
 def maxprimefactors(limit):
     total = 1
-    primes = [i for (i, isprime) in enumerate(list_primality(int(math.sqrt(limit)))) if isprime]
+    primes = [i for (i, isprime) in enumerate(Erastotenes_crib(int(math.sqrt(limit)))) if isprime]
     for i in primes:
         if total * i > limit:
             break
@@ -44,4 +44,4 @@ def maxprimefactors(limit):
     return total
 
 if __name__ == "__main__":
-    print(maxprimefactors(10))
+    print(maxprimefactors(1000000))
